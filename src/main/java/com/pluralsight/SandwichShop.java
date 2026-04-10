@@ -33,15 +33,13 @@ public class SandwichShop {
         } else System.out.println("Invalid Option, Try again");
 
         //Determine if the user is a student or senior
-        System.out.println("Are you a student (17 or under) or a senior (65 or older)?");
-        boolean student = true;
-        boolean senior = true;
+        System.out.println("Are you a student (17 or under), senior (65 or older), or neither?");
 
         //Create conditionals to add discounts
-        String age = scanner.nextLine();
-        if (student == true) {
+        String status = scanner.nextLine().toLowerCase();
+        if (status.equals("student")) {
             discount = 0.9;
-        } else if (senior == true) {
+        } else if (status.equals("senior")) {
             discount = 0.8;
         } else discount = 1.0;
 
