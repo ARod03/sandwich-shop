@@ -12,6 +12,7 @@ public class SandwichShop2 {
         //Set the variables for the base price
         double basePrice = 0.00;
         double discount = 0.00;
+        double extra = 0.00;
 
         //Prompt the user for the size of the sandwich (1 or 2)
         System.out.println("Please decide which size you would want your sandwich to be: 1 or 2");
@@ -30,6 +31,15 @@ public class SandwichShop2 {
         } else if (size == 2) {
             basePrice = 8.95;
         } else System.out.println("Invalid Option, Try again");
+
+        //Ask if the user wants their sandwich loaded
+        System.out.println("Would you like your sandwich to be loaded? (yes/no)");
+        String loadedSandwich = scanner.nextLine().toLowerCase();
+
+        //Create conditionals for the options to be loaded or not
+        if (loadedSandwich.equals("yes") && size == 1) {
+            extra = 1.00;
+        }
 
         //Determine if the user is a student or senior
         System.out.println("Are you a student (17 or under), senior (65 or older), or neither?");
