@@ -22,7 +22,9 @@ public class SandwichShop {
         System.out.println("Enter your choice (1 or 2)");
         short size = scanner.nextShort();
 
-        //Create conditionals for the 2 sandwich sizes
+        scanner.nextLine();
+
+        //Create conditionals for the 2 sandwich size prices
 
         if (size == 1) {
             basePrice = 5.45;
@@ -35,14 +37,16 @@ public class SandwichShop {
         boolean student = true;
         boolean senior = true;
 
+        //Create conditionals to add discounts
         String age = scanner.nextLine();
         if (student == true) {
-            discount = 0.1;
+            discount = 0.9;
         } else if (senior == true) {
-            discount = 0.2;
+            discount = 0.8;
         } else discount = 1.0;
 
-        System.out.println("The price of your sandwich is: $" + basePrice * discount);
+        //Print out result
+        System.out.printf("The price of your sandwich is: $%.2f", (basePrice * discount));
 
 
 
