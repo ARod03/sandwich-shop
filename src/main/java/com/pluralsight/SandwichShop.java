@@ -44,7 +44,7 @@ public class SandwichShop {
         } else discount = 1.0;
 
         //Print out result
-        System.out.printf("The price of your sandwich is: $%.2f", (basePrice * discount));
+        System.out.printf("The total cost of your sandwich is: $%.2f", (basePrice * discount));
 
 
 

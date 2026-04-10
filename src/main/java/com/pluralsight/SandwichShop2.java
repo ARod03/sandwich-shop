@@ -41,7 +41,7 @@ public class SandwichShop2 {
             extra = 1.00;
         } else if (loadedSandwich.equals("yes") && size == 2) {
             extra = 1.75;
-        } else {
+        } else if (loadedSandwich.equals("no")) {
             extra = 0.00;
         }
         //Determine if the user is a student or senior
@@ -58,7 +58,7 @@ public class SandwichShop2 {
         }
 
         //Print out result
-        System.out.printf("The price of your sandwich is: $%.2f", ((basePrice * discount) + extra));
+        System.out.printf("The total cost of your sandwich is: $%.2f", ((basePrice + extra) * discount));
 
     }
 }
