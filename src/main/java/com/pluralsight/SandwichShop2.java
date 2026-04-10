@@ -39,8 +39,11 @@ public class SandwichShop2 {
         //Create conditionals for the options to be loaded or not
         if (loadedSandwich.equals("yes") && size == 1) {
             extra = 1.00;
+        } else if (loadedSandwich.equals("yes") && size == 2) {
+            extra = 1.75;
+        } else {
+            extra = 0.00;
         }
-
         //Determine if the user is a student or senior
         System.out.println("Are you a student (17 or under), senior (65 or older), or neither?");
 
@@ -50,10 +53,12 @@ public class SandwichShop2 {
             discount = 0.9;
         } else if (status.equals("senior")) {
             discount = 0.8;
-        } else discount = 1.0;
+        } else {
+            discount = 1.0;
+        }
 
         //Print out result
-        System.out.printf("The price of your sandwich is: $%.2f", (basePrice * discount));
+        System.out.printf("The price of your sandwich is: $%.2f", ((basePrice * discount) + extra));
 
     }
 }
