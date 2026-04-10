@@ -1,8 +1,7 @@
 package com.pluralsight;
-
 import java.util.Scanner;
 
-public class SandwichShop {
+public class SandwichShop2 {
 
     public static void main(String[] args) {
 
@@ -46,8 +45,5 @@ public class SandwichShop {
         //Print out result
         System.out.printf("The price of your sandwich is: $%.2f", (basePrice * discount));
 
-
-
     }
-
 }
